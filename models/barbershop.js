@@ -4,7 +4,8 @@ const mongoose = require('./connection.js')
 const BarbershopSchema = new mongoose.Schema({
  name: String,
  address: String,
- currentBarbers: String
+ currentBarbers: String,
+ image: String
 })
 
 
@@ -19,8 +20,8 @@ function getBarbershop(barbershopId) {
     return BarbershopCollection.findById(barbershopId)
 }
 
-function addNewBarbershop(shopObject) {
-    return BarbershopCollection.create(shopObject)
+function addNewBarbershop(barbershopObject) {
+    return BarbershopCollection.create(barbershopObject)
 }
 
 function deleteBarbershop(barbershopId) {

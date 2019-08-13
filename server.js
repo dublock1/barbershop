@@ -17,7 +17,7 @@ app.use(express.static(`${__dirname}/client/build`))
 
 
 
-app.use('/api/barbershop', barbershopRouter)
+app.use('/api/barbershops', barbershopRouter)
 
 
 app.get('/*', (req, res) => {

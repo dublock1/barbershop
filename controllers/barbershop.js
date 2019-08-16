@@ -28,7 +28,7 @@ barbershopRouter.post('/', (req, res) => {
     })
 })
 
-barbershopRouter.delete('/barbershopId', (req, res) => {
+barbershopRouter.delete('/:barbershopId', (req, res) => {
     barbershopApi.deleteBarbershop(req.params.barbershopId)
     .then((deleteBarbershop) => {
         res.json(deleteBarbershop)

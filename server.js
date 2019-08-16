@@ -3,6 +3,7 @@ const app = express()
 
 
 const { barbershopRouter } = require('./controllers/barbershop.js')
+const { barberRouter } = require('./controllers/barber.js')
 
 
 
@@ -18,6 +19,7 @@ app.use(express.static(`${__dirname}/client/build`))
 
 
 app.use('/api/barbershops', barbershopRouter)
+app.use('/api/barbers', barberRouter)
 
 
 app.get('/*', (req, res) => {

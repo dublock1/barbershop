@@ -19,8 +19,8 @@ function App() {
           <Route path='/barbershops/:barbershopId' component={Barbershop} />
           <Route exact path='/barbers' component={BarberList}/>
           <Route path='/barbers/new' component={BarberForm}/>
-          <Route path='/barbers/:barberId' component={Barber}/>
           <Route exact path='/barbers/:barberId/edit' component={EditBarberForm}/>
+          <Route path='/barbers/:barberId' component={Barber}/>
         </Switch>
       </Router>
     </div>

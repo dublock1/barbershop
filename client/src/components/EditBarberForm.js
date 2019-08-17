@@ -13,6 +13,12 @@ export default class EditBarberForm extends Component {
         redirectToHome: false
       };
 
+      componentDidMount(){
+        axios.get(`/api/barbers/${this.props.match.params.barberId}`).then(res => {
+            this.setState({newBarber: res.data})
+        })
+    }
+
       handleInputChange = e => {
         const copiedBarber = { ...this.state.newBarber };
         copiedBarber[e.target.name] = e.target.value;

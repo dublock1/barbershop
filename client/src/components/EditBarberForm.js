@@ -89,7 +89,7 @@ export default class EditBarberForm extends Component {
                           value={this.state.newBarber.bio}
                       />
       
-                          <input type='submit' value='Edit Barber'/>
+                          <input type='submit' value='Update Barber'/>
                       </form>
           </div>
           )

@@ -1,7 +1,7 @@
 const express = require('express')
 
 
-const templateApi = require('../models/template.js')
+const styleApi = require('../models/style.js')
 
 
 const styleRouter = express.Router()
@@ -34,11 +34,6 @@ styleRouter.delete('/styleId', (req, res) => {
     })
 })
 
-/* Step 6
- *
- * Export the router from the file.
- *
- */
 module.exports = {
   styleRouter
 }

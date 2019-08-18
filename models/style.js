@@ -2,22 +2,14 @@ const mongoose = require('./connection.js')
 
 
 const StyleSchema = new mongoose.Schema({
- name: String
+ name: String,
+ image: String
 })
 
-/* Step 3
- *
- * TODO: create collection API
- * NOTE: skip this if you are not using mongoose
- *
- */
+
 const StyleCollection = mongoose.model('Style', StyleSchema)
 
-/* Step 4
- *
- * TODO: delete this it's just a sample
- *
- */
+
 function getAllStyles() {
   return StyleCollection.find()
 }

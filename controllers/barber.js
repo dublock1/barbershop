@@ -15,6 +15,7 @@ barberRouter.get('/', (req, res) => {
 })
 
 barberRouter.get('/:barberId', (req, res) => {
+    
     barberApi.getBarber(req.params.barberId)
     .then((barber) => {
         res.json(barber)
@@ -42,11 +43,7 @@ barberRouter.delete('/:barberId', (req, res) => {
     })
 })
 
-/* Step 6
- *
- * Export the router from the file.
- *
- */
+
 module.exports = {
   barberRouter
 }

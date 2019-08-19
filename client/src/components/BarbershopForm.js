@@ -2,22 +2,18 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Redirect } from 'react-router-dom'
 
-export default class NewBarbershopForm extends Component {
+export default class BarbershopForm extends Component {
     state = {
         newBarbershop: {
             name: '',
             address: '',
-            currentBarber: [    ],
+            currentBarbers: [],
             image: ''
         },
         redirectToHome: false
     }
 
-    handleToggleForm = e => {
-        this.setState(state => {
-            return {isNewFormDisplayed: !state.isNewFormDisplayed }
-        })
-    }
+    
 
     handleSubmit = e => {
         e.preventDefault();
@@ -27,7 +23,7 @@ export default class NewBarbershopForm extends Component {
                 isNewFormDisplayed: false,
                 redirectToHome: true
             })
-            this.handleToggleForm()
+           
         })
     }
 

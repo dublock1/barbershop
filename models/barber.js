@@ -6,7 +6,8 @@ const BarberSchema = new mongoose.Schema({
  email: String,
  experience: Number,
  bio: String,
- image: String
+ image: String,
+ barbershopId: mongoose.Types.ObjectId
 })
 
 
@@ -33,11 +34,16 @@ function deleteBarber(barberId) {
     return BarberCollection.findByIdAndDelete(barberId)
 }
 
+function getBarberByShopId(barbershopId) {
+    return BarberCollection.find({barbershopId: barbershopId})
+}
+
 
 module.exports = {
   getAllBarbers,
   getBarber,
   addNewBarber,
   updateBarber,
-  deleteBarber
+  deleteBarber,
+  getBarberByShopId
 }

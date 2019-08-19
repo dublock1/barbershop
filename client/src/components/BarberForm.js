@@ -9,15 +9,16 @@ export default class BarberForm extends Component {
       email: "",
       experience: "",
       bio: "",
-      image: ""
+      image: "",
+      barbershopId: this.props.match.params.barbershopId
     },
-    redirectToHome: false
+    redirectToHome: false,
   };
 
   handleSubmit = e => {
     e.preventDefault();
 
-    axios.post("/api/barbers", this.state.newBarber).then(() => {
+    axios.post('/api/barbers', this.state.newBarber).then(() => {
       this.setState({
         redirectToHome: true
       });
@@ -32,7 +33,7 @@ export default class BarberForm extends Component {
   };
   render() {
     if (this.state.redirectToHome) {
-      return <Redirect to="/barbers" />;
+      return <Redirect to={`/barbershops/${this.props.match.params.barbershopId}`} />;
     }
     return (
     <div>

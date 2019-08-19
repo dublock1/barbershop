@@ -2,12 +2,12 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Redirect } from 'react-router-dom'
 
-export default class NewBarbershopForm extends Component {
+export default class BarbershopForm extends Component {
     state = {
         newBarbershop: {
             name: '',
             address: '',
-            currentBarber: [    ],
+            currentBarber: [],
             image: ''
         },
         redirectToHome: false

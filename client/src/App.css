@@ -31,3 +31,12 @@
     transform: rotate(360deg);
   }
 }
+
+.bg-dark {
+  background-color: #004085!important;
+  width: 50%;
+}
+
+.text-white {
+  color: blueviolet;
+}

@@ -8,7 +8,7 @@ export default class BarbershopList extends Component {
     newBarbershop: {
       name: "",
       address: "",
-      currentBarber: "",
+      currentBarbers: "",
       image: ""
     },
     barbershops: []
@@ -27,12 +27,12 @@ export default class BarbershopList extends Component {
   render() {
     const barbershopList = this.state.barbershops.map(barbershop => {
       return (
-        <div>
+        <div className="card bg-dark text-white" >
           <Link key={barbershop._id} to={`/barbershops/${barbershop._id}`}>
-            <h2>{barbershop.name}</h2>
-            <h2>{barbershop.address}</h2>
+            <h2 className="card-title">Shop Name: {barbershop.name}</h2>
+            <h2 className="card-subtitle mb-2 text-muted">Address: {barbershop.address}</h2>
             <h2>Current Barbers: {barbershop.currentBarber}</h2>
-            <img src={barbershop.image} />
+            <img src={barbershop.image} className="card-img" />
           </Link>
         </div>
       );

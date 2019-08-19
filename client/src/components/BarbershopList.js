@@ -38,11 +38,11 @@ export default class BarbershopList extends Component {
       );
     });
     return (
-      <div>
-        <h1>All Good</h1>
+      <div> 
         <Link to={'/barbershops/new'}>
         <Button>Add Barbershop</Button>
         </Link>
+        
         {barbershopList}
       </div>
     );

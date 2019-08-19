@@ -8,6 +8,9 @@ import BarberList from './components/BarberList';
 import BarberForm from './components/BarberForm';
 import Barber from './components/Barber'
 import EditBarberForm from './components/EditBarberForm';
+import StyleForm from './components/StyleForm';
+import StyleList from './components/StyleList'
+import Style from './components/Style'
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
           <Route path='/barbers/new' component={BarberForm}/>
           <Route exact path='/barbers/:barberId/edit' component={EditBarberForm}/>
           <Route path='/barbers/:barberId' component={Barber}/>
+          <Route exact path='/styles' component={StyleList}/>
+          <Route path='/styles/new' component={StyleForm}/>
+          <Route path='/styles/:styleId' component={Style}/>
         </Switch>
       </Router>
     </div>

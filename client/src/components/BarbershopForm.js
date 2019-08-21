@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Redirect } from 'react-router-dom'
+import { Form, Col} from 'react-bootstrap'
 
 export default class BarbershopForm extends Component {
     state = {
         newBarbershop: {
             name: '',
             address: '',
-            currentBarbers: [],
+            currentBarbers: '',
             image: ''
         },
         redirectToHome: false
@@ -40,25 +41,31 @@ export default class BarbershopForm extends Component {
         }
         return (
             <div>
-                <form onSubmit={this.handleSubmit}>
-                <label htmlFor='new-barbershop-name'>Shop Name</label>
-                    <input
+                <Form onSubmit={this.handleSubmit}>
+                <Form.Row>
+                <Form.Group as={Col} controlId="formGridName">
+                <Form.Label htmlFor='new-barbershop-name'>Shop Name</Form.Label>
+                    <Form.Control
                     type='text'
                     name='name'
                     id='new-barbershop-name'
                     onChange={this.handleInputChange}
                     value={this.state.newBarbershop.name}
                 />
-                <label htmlFor='new-barbershop-address'>Shop Address</label>
-                    <input 
+                </Form.Group>
+                <Form.Group as={Col} controlId="formGridAddress">
+                <Form.Label htmlFor='new-barbershop-address'>Shop Address</Form.Label>
+                    <Form.Control
                     type='text'
                     name='address'
                     id='new-barbershop-address'
                     onChange={this.handleInputChange}
                     value={this.state.newBarbershop.address}
                     />
+                    </Form.Group>
+                    </Form.Row>
 
-                <label htmlFor='new-barbershop-image'>Shop Image</label>
+                <Form.Label htmlFor='new-barbershop-image'>Shop Image</Form.Label>
                     <input 
                     type='text'
                     name='image'
@@ -68,7 +75,7 @@ export default class BarbershopForm extends Component {
                     />
 
                     <input type='submit' value='Add Shop'/>
-                </form>
+                </Form>
             </div>
         )
     }

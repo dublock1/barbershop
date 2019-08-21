@@ -3,7 +3,8 @@ const mongoose = require('./connection.js')
 
 const StyleSchema = new mongoose.Schema({
  name: String,
- image: String
+ image: String,
+ barberId: mongoose.Types.ObjectId
 })
 
 
@@ -26,10 +27,15 @@ function deleteStyle(styleId) {
     return StyleCollection.findByIdAndDelete(styleId)
 }
 
+function getStyleByBarberId(barberId) {
+  return StyleCollection.find({barberId: barberId})
+}
+
 
 module.exports = {
   getAllStyles,
   getStyle,
   addNewStyle,
-  deleteStyle
+  deleteStyle,
+  getStyleByBarberId
 }

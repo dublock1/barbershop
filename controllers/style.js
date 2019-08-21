@@ -27,7 +27,7 @@ styleRouter.post('/', (req, res) => {
     })
 })
 
-styleRouter.delete('/styleId', (req, res) => {
+styleRouter.delete('/:styleId', (req, res) => {
     styleApi.deleteStyle(req.params.styleId)
     .then((deleteStyle) => {
         res.json(deleteStyle)

@@ -32,11 +32,51 @@
   }
 }
 
-.bg-dark {
-  background-color: #004085!important;
-  width: 50%;
+body {
+  background-image: url("https://i.imgur.com/cYVCpGL.jpg");
+  display: inherit;
 }
 
-.text-white {
-  color: blueviolet;
+.card {
+  background-color: rgba(95, 95, 248, 0.87);
+  width: 30%;
+
 }
+
+.link-color{
+  color: red;
+  font-weight: 800;
+}
+
+p {
+  color: rgb(243, 8, 8);
+  font-weight: 800;
+  font-size: 30px;
+  
+}
+
+p small {
+  font-size:15px;
+}
+
+label {
+  color: white;
+}
+
+img {
+  height: 250px;
+}
+
+.card-title {
+  color: red;
+}
+
+.card-text {
+  color: red;
+}
+
+.text-muted {
+  color: black;
+}
+
+

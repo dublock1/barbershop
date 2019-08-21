@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Redirect } from "react-router-dom";
-import { Button } from "react-bootstrap";
+import { Button, Jumbotron } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 export default class Barber extends Component {
@@ -37,10 +37,9 @@ export default class Barber extends Component {
     }
     return (
       <div>
-        <Link to='/'>
-          <Button>
-            Back to Shops
-          </Button>
+        <Jumbotron className="tron" style={{maxWidth: '50em', margin: '0 20rem'}}>
+        <Link to="/">
+          <Button>Back to Shops</Button>
         </Link>
         <img src={this.state.newBarber.image} />
         <p> Barber name: {this.state.newBarber.name}</p>
@@ -57,16 +56,12 @@ export default class Barber extends Component {
             <div>
               <Link className="link-color" to={`/styles/${style._id}`}>
                 {style.name}
-                
               </Link>
             </div>
           );
         })}
-        <Link
-          to={`/barbers/${
-            this.props.match.params.barberId
-          }/styles/new`}
-        >
+        </Jumbotron>
+        <Link to={`/barbers/${this.props.match.params.barberId}/styles/new`}>
           <Button>Add Style</Button>
         </Link>
       </div>

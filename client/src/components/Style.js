@@ -7,7 +7,8 @@ export default class Style extends Component {
     state = {
         newStyle: {
           name: "",
-          image: ""
+          image: "",
+          barberId: this.props.match.params.barberId
         },
         redirectToHome: false
       };
@@ -26,7 +27,7 @@ export default class Style extends Component {
 
     render() {
         if (this.state.redirectToHome) {
-            return <Redirect to="/styles" />;
+            return <Redirect to='/' />;
           }
         return (
             <div>

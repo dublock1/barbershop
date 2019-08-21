@@ -6,7 +6,8 @@ export default class StyleForm extends Component {
   state = {
     newStyle: {
       name: "",
-      image: ""
+      image: "",
+      barberId: this.props.match.params.barberId
     },
     redirectToHome: false
   };
@@ -30,7 +31,7 @@ export default class StyleForm extends Component {
 
   render() {
     if (this.state.redirectToHome) {
-      return <Redirect to="/styles" />;
+      return <Redirect to={`/barbers/${this.props.match.params.barberId}`} />;
     }
     return (
       <div>

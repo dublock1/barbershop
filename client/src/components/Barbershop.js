@@ -41,15 +41,20 @@ export default class Barbershop extends Component {
     }
     return (
       <div>
-        <p>{this.state.newBarbershop.name}</p>
-        <p>{this.state.newBarbershop.address}</p>
-        <li>{this.state.newBarbershop.currentBarbers}</li>
+        <p>Shop name: {this.state.newBarbershop.name}</p>
+        <p> Address: {this.state.newBarbershop.address}</p>
         <img src={this.state.newBarbershop.image} />
+        <p>{this.state.newBarbershop.currentBarbers}</p>
         <ul>
           {this.state.barbers.map(barber => {
             return (
               <div>
+                <Link 
+                className='link-color'
+                to={`/barbers/${barber._id}`}>
+                
                 <li>{barber.name}</li>
+                </Link>
               </div>
             );
           })}

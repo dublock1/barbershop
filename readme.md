@@ -1,11 +1,11 @@
-# Project 3 : Meme-Gen X [MERN App]
+# Project 4 : BarberShop [MERN App]
 
 I made a Find Barbershop app. 
 ## Links :
 * Trello project board : [trello](https://trello.com/b/Zm1Gu05e/barbershop)
 * Heroku : [heroku](https://enigmatic-temple-65729.herokuapp.com/)
-## Wireframes : ()
-## ERD :()
+## Wireframes : (https://i.postimg.cc/NFkfv7pk/project4-Wire-Frame.jpg)
+## ERD :(https://i.postimg.cc/yN1t8qsR/project4-Erd.jpg)
 ## Technologies Used : 
 Back End :
 * Express

@@ -40,8 +40,8 @@ export default class BarbershopForm extends Component {
             return <Redirect to='/' />
         }
         return (
-            <div>
-                <Form onSubmit={this.handleSubmit}>
+            <div >
+                <Form onSubmit={this.handleSubmit} className='form'>
                 <Form.Row>
                 <Form.Group as={Col} controlId="formGridName">
                 <Form.Label htmlFor='new-barbershop-name'>Shop Name</Form.Label>
@@ -53,7 +53,7 @@ export default class BarbershopForm extends Component {
                     value={this.state.newBarbershop.name}
                 />
                 </Form.Group>
-                <Form.Group as={Col} controlId="formGridAddress">
+                <Form.Group as={Col} controlId="formGridAddress" >
                 <Form.Label htmlFor='new-barbershop-address'>Shop Address</Form.Label>
                     <Form.Control
                     type='text'

@@ -83,4 +83,14 @@ img {
   background-color: rgba(222, 221, 226, 0.383);
 }
 
+.img {
+  border-radius: 50%;
+}
+
+
+
+.form {
+  margin: 10px 10px 0 10px;
+}
+
 

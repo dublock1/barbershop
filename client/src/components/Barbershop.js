@@ -41,17 +41,18 @@ export default class Barbershop extends Component {
     }
     return (
       <div>
+
         <Jumbotron className="tron" style={{maxWidth: '50em', margin: '0 20rem'}}>
         <p>Shop name: {this.state.newBarbershop.name}</p>
         <p> Address: {this.state.newBarbershop.address}</p>
-        <img src={this.state.newBarbershop.image} />
+          <img src={this.state.newBarbershop.image}/>
         <p>{this.state.newBarbershop.currentBarbers}</p>
         <ul>
           {this.state.barbers.map(barber => {
             return (
               <div>
                 <Link className="link-color" to={`/barbers/${barber._id}`}>
-                  <li>{barber.name}</li>
+                  {barber.name}
                 </Link>
               </div>
             );
@@ -63,7 +64,7 @@ export default class Barbershop extends Component {
           to={`/barbershops/${
             this.props.match.params.barbershopId
           }/barbers/new`}
-        >
+          >
           <Button>Add Barber</Button>
         </Link>
       </div>

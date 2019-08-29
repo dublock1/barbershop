@@ -36,12 +36,14 @@ export default class Barber extends Component {
       return <Redirect to="/" />;
     }
     return (
+     
       <div>
-        <Jumbotron className="tron" style={{maxWidth: '50em', margin: '0 20rem'}}>
-        <Link to="/">
+         <Link to="/">
           <Button>Back to Shops</Button>
         </Link>
-        <img src={this.state.newBarber.image} />
+        <Jumbotron className="tron" style={{maxWidth: '50em', margin: '0 20rem'}}>
+        
+        <img src={this.state.newBarber.image} className='img' />
         <p> Barber name: {this.state.newBarber.name}</p>
         <p>Email: {this.state.newBarber.email}</p>
         <p> Experience: {this.state.newBarber.experience}</p>
